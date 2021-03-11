@@ -1,0 +1,45 @@
+@import "../../css/variables.scss";
+
+.hint-to-scroll {
+  margin-bottom: 55px;
+
+  &__hint {
+    margin-bottom: 5px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: inherit;
+    opacity: 0.8;
+  }
+
+  &__icon {
+    margin: 0 auto;
+    width: 21px;
+    height: 21px;
+    border-left: 3px solid #ffffff;
+    border-bottom: 3px solid #ffffff;
+    transform: rotate(-45deg);
+    fill: inherit;
+    border-color: var(--color-border, #ffffff);
+    animation: trail 1s infinite;
+
+    & + & {
+      margin-top: -10px;
+      animation-delay: 0.3s;
+    }
+  }
+
+  @media screen and (max-width: $screen-mobile) {
+    width: 50%;
+  }
+}
+
+@keyframes trail {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.4;
+  }
+}

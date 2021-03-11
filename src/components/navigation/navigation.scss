@@ -1,0 +1,38 @@
+@import "../../css/variables.scss";
+
+.nav {
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 48px;
+  text-transform: uppercase;
+
+  &__link {
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -0.5rem;
+      left: 0;
+      width: 0%;
+      height: 1px;
+      background-color: var(--color-link, #f1f1f1);
+      transition: all 0.2s ease-in;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: $screen-mobile) {
+    flex-direction: column;
+    width: 100%;
+    gap: 25px;
+  }
+}

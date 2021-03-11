@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
+
+@import "../../css/variables.scss";
+
+.about-me {
+  width: 100%;
+  background-color: #ffffff;
+  color: #bebebe;
+  --color-border: #bebebe;
+
+  &__slot {
+    position: relative;
+    font-size: 24px;
+    --color-link: #bebebe;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 66px;
+      width: calc(100% - 132px);
+      height: 1px;
+      background-color: #bebebe;
+
+      @media screen and (max-width: $screen-tablet) {
+        width: 100%;
+        left: 0;
+      }
+    }
+
+    @media screen and (max-width: $screen-mobile) {
+      display: none;
+    }
+  }
+
+  &__inner {
+    position: relative;
+    margin: 75px auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: $screen-tablet) {
+      margin: 0 0 30px;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    max-width: 771px;
+    font-family: "Open Sans", sans-serif;
+    text-align: left;
+    color: #202020;
+    overflow-x: hidden;
+
+    & + & {
+      margin-left: 56px;
+
+      @media screen and (max-width: $screen-mobile) {
+        margin-left: 35px;
+      }
+    }
+
+    & img {
+      display: block;
+      width: 100%;
+      height: auto;
+
+      @media screen and (max-width: $screen-mobile) {
+        width: auto;
+        height: 700px;
+        transform: translateX(-30%);
+      }
+    }
+  }
+
+  &__title {
+    margin-top: 20px;
+    padding: 60px 0;
+    font-size: 60px;
+    text-transform: uppercase;
+
+    @media screen and (max-width: $screen-tablet) {
+      margin-top: 0;
+    }
+
+    @media screen and (max-width: $screen-mobile) {
+      padding: 40px 0 0;
+      font-size: 30px;
+    }
+  }
+
+  &__name {
+    text-transform: capitalize;
+    font-size: 2.25rem;
+    font-weight: bold;
+
+    @media screen and (max-width: $screen-mobile) {
+      font-size: 1.12rem;
+    }
+  }
+
+  & p {
+    padding: 12px 0;
+    margin-bottom: 20px;
+    width: 95%;
+    max-width: 680px;
+    font-size: 1.5rem;
+    line-height: 2;
+
+    @media screen and (max-width: $screen-mobile) {
+      font-size: 1.12rem;
+      font-weight: 300;
+      line-height: 2.5;
+      width: 90%;
+    }
+
+    & + p {
+      @media screen and (max-width: $screen-mobile) {
+        display: none;
+      }
+    }
+  }
+
+  &__hint {
+    @media screen and (max-width: $screen-mobile) {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: $screen-tablet) {
+    margin-bottom: 85px;
+  }
+
+  @media screen and (max-width: $screen-mobile) {
+    margin-bottom: 45px;
+  }
+}

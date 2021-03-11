@@ -1,0 +1,27 @@
+.menu {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  text-transform: uppercase;
+
+  &__open {
+    & span {
+      padding: 0 5px;
+    }
+  }
+
+  &__close {
+    margin-left: 1rem;
+    display: none;
+  }
+
+  &.active {
+    & .menu__open {
+      display: none;
+    }
+
+    .menu__close {
+      display: block;
+    }
+  }
+}
